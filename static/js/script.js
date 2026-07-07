@@ -77,12 +77,19 @@ form.addEventListener("submit", async function (event) {
         scriptResult.textContent = data.script;
         scenesResult.textContent = data.scenes;
         ctaResult.textContent = data.cta;
+
+        // Re-enable the button
+        generateBtn.disabled = false;
+        generateBtn.innerHTML = "Generate Content 🚀";
+        
         document.getElementById("results").scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
+        
 
     }
+ 
 
     catch (error) {
 
